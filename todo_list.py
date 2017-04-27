@@ -20,6 +20,10 @@ def view_list(my_list):
     """Print each item in the list."""
     print my_list
 
+def delete_first_item(my_list):
+    del my_list[0]
+    print my_list
+
 # This function needs to return something
 def display_main_menu(my_list):
     """Displays main options, takes in user input, and calls view or add function."""
@@ -31,6 +35,7 @@ def display_main_menu(my_list):
     A. Add a new item
     B. View list
     C. Quit the program
+    D. Delete first item from list
     >>> """
 
 
@@ -42,6 +47,8 @@ def display_main_menu(my_list):
             add_to_list(my_list)
         elif choice == 'B':
             view_list(my_list)
+        elif choice == 'D':
+            delete_first_item(my_list)
         else:
 
             break
